@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="data">
+    <button onclick="calc()">Submit</button>
+    <h1 id="result">------</h1>
+    <script>
+        function calc(){
+            inputEle=document.getElementById("data");
+            h1array=document.getElementById('result');
+            n=inputEle.value;
+            if(n%2==0){
+                h1array.innerHTML="even number"
+            }
+            else
+            h1array.innerHTML="odd number"
+        }
+    </script>
+</body>
+</html>
