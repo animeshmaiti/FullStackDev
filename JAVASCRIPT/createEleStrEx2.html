@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>button</title>
+    <style>
+        .btn:nth-child(even){
+            background-color: aqua;
+        }
+        .btn:nth-child(odd){
+            background-color: bisque;
+        }
+        .btn{
+            margin: 5px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Tittle</h1>
+    </div>
+    <script>
+        containerObj = document.getElementById('container')
+        html = '';
+        for (i = 0; i < 100; i++) {
+            html += `<button class='btn'>${i}</button>`
+        }
+        containerObj.innerHTML += html;
+    </script>
+</body>
+
+</html>
