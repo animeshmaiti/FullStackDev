@@ -4,13 +4,15 @@
 <head>
     <title>button</title>
     <style>
-        .btn:nth-child(even){
+        .btn:nth-child(even) {
             background-color: aqua;
         }
-        .btn:nth-child(odd){
+
+        .btn:nth-child(odd) {
             background-color: bisque;
         }
-        .btn{
+
+        .btn {
             margin: 5px;
             width: 50px;
         }
@@ -28,9 +30,13 @@
             html += `<button class='btn' id='btn${i}' onclick="update('btn${i}')">${i}</button>`
         }
         containerObj.innerHTML += html;
-        const update=(id)=>{
-            refObj=document.getElementById(id);
-            refObj.style.backgroundColor='red';
+        const update = (id) => {
+            refObj = document.getElementById(id);
+            if (refObj.style.backgroundColor == 'red') {
+                refObj.style.visibility='hidden';
+            } else {
+                refObj.style.backgroundColor = 'red';
+            }
         }
     </script>
 </body>
