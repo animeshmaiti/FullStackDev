@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .card{
+            /* height: 100px; */
+            /* width: 100px; */
+            background-color: bisque;
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            position: relative;
+        }
+        .label{
+            display: inline-block; 
+            color: red;
+            margin-top: 20px;  
+        }
+        .name{
+            display: inline-block;
+            color: aqua;
+            font-size: 20px;
+        }
+        .closeBtn{
+            position: absolute;
+            right:0px;
+            top:0;
+            background-color: red;
+            border: none;
+            opacity: 0.4;
+            color:white;
+        }
+        .closeBtn:hover{
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+    <script>
+        refObj = document.getElementById('container');
+        names = ['Animesh', 'Arman', 'Harini', 'Swely'];
+        // JSON
+
+        html='';
+        for (i = 0; i < names.length; i++) {
+            html += `<div class='card'>
+            <button class='closeBtn'>x</button>
+            <label class="label">Name</label>
+            <div class="name">${names[i]}</div>
+        </div>`
+        }
+        refObj.innerHTML=html;
+    </script>
+</body>
+
+</html>
