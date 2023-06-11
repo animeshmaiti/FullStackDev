@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CRUD</title>
+    <style>
+        .card{
+            width: fit-content;
+            height: fit-content;
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .name{
+            font-size: 20px;
+            text-transform: uppercase;
+
+        }
+        .lead{
+            color: darkgoldenrod;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="search" oninput="searchMovie()" placeholder="Search Movie Name">
+    <input type="text" id="name" placeholder="Movie Name">
+    <input type="text" id="lead" placeholder="Lead Actor Name">
+    <input type="text" id="collection" placeholder="Box Office Collection">
+    <button onclick="addMovie()">Add To DB</button>
+
+    <div id="searchResult">
+
+    </div>
+    <div id="movieList">
+        
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <script src="script2.js"></script>
+</body>
+
+</html>
