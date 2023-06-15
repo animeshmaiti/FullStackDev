@@ -26,12 +26,13 @@
 </head>
 
 <body>
-    <input type="text" id="search" oninput="searchMovie()" placeholder="Search Movie Name">
+    <!-- <input type="text" id="search" oninput="searchMovie()" placeholder="Search Movie Name"> -->
     <input type="text" id="name" placeholder="Movie Name">
     <input type="text" id="lead" placeholder="Lead Actor Name">
     <input type="text" id="collection" placeholder="Box Office Collection">
     <button onclick="addMovie()">Add To DB</button>
-
+    <input class="search" id="searchip" type="text" onkeyup="search()" placeholder="search here...">
+    <!-- <button onclick="search()">Search</button> -->
     <div id="searchResult">
 
     </div>

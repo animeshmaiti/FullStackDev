@@ -1,13 +1,13 @@
 // crud + data transformation
-let datArray=[
+let dataArray=[
     {name:'iron man',lead:'tony stark',collection:'200mi'},
     {name:'man of steel',lead:'clark',collection:'210mil'},
     {name:'spider man',lead:'peter parker',collection:'230mil'},
 ];
-const render=()=>{
+const render=(dataSource=dataArray)=>{
     movieListObj=document.getElementById('movieList');
     let html='';
-    datArray.map((obj,index)=>{
+    dataSource.map((obj,index)=>{
         html+=`<div class="card">
         <div class="name">${obj.name}</div>
         <div class="lead">${obj.lead}</div>
@@ -27,11 +27,22 @@ const addMovie=()=>{
         lead:leadObj.value,
         collection:collectionObj.value,
     }
-    datArray.push(tmpObj);
+    dataArray.push(tmpObj);
     render();
-    console.log(datArray);
+    console.log(dataArray);
 }
 const deleteCard=(index)=>{
-    datArray.splice(index,1);
+    dataArray.splice(index,1);
     render();
+}
+
+const search=()=>{
+    let searchInput=document.getElementById('searchip').value.toLowerCase();
+    
+    let result = dataArray.filter((obj)=>{
+        let sourceData = Object.values(obj).join(" ");
+        return sourceData.includes(searchInput);
+    })
+    console.log(result);
+    render(result);
 }

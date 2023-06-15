@@ -65,14 +65,16 @@ const deleteHistory=(index)=>{
 // search movie func
 let searchObj=[];
 const searchMovie=()=>{
-    inputVal=document.getElementById('search').value;
+    let inputVal=document.getElementById('search').value;
     // console.log(inputVal);
-    indVal=0;
+    // indVal=0;
     const result=dataArray.filter((obj)=>{
-        if(inputVal==obj.name){
-            return true;
-        }
+        // return obj.name.includes(inputVal);
+        return obj.name===inputVal;
     })
-    searchObj=result;
+    console.log(result);
+    // searchObj=result;
+    searchObj.push(result);
+    console.log(searchObj);
     renderResult(result);
 }
