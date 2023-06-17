@@ -17,6 +17,7 @@ else{
 this is in htdocs directory you can change this dashboard with your created .php file
 of this php file we need to give a age params in browser url like http://localhost/second.php?age=23
 else you can create a html file anywhere like i did in this index.html
+after your work stop the apache server
 
 you can run it in any device with connected same network like same wi-fi or use hot-spot by the step bellow
 get your ip-address for host using this command in your cmd
