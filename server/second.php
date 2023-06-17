@@ -1,3 +1,4 @@
+<!-- 1 tier dbms architecture -->
 <!-- first install xampp 
 https://www.apachefriends.org/download.html latest version for windows 8.2.4 / PHP 8.2.4 -->
 <!-- go to your xampp->htdocs file directory C:\xampp\htdocs then create a new php file like second.php-->
