@@ -15,6 +15,19 @@
         #star-rating i.filled {
             color: gold;
         }
+
+        #star-rating i.half-filled:before {
+            content: '\f089';
+            /* Half-filled star icon (Font Awesome) */
+            color: gold;
+        }
+
+        /* 
+        #star-rating {
+            width: 100px;
+            height: 20px;
+            background: linear-gradient(to right, gold 0%, gold 50%, #888 50%, #888 100%);
+        } */
     </style>
 </head>
 
@@ -24,18 +37,48 @@
     <script>
         function displayStarRating(rating) {
             const starRatingContainer = document.getElementById('star-rating');
-            starRatingContainer.innerHTML = ''; // Clear previous content
-
-            // Loop to generate star icons based on rating
-            for (let i = 0; i < 5; i++) {
-                const starIcon = document.createElement('i');
-                starIcon.classList.add('fas', 'fa-star');
-                if (i < rating) {
-                    starIcon.classList.add('filled');
+            if (rating <= 5 && rating >= 0) {
+                starRatingContainer.innerHTML = ''; // Clear previous content
+                const fullStar = Math.floor(rating);
+                const decimalPart = rating % 1;
+                let hasHalfStar = false;
+                let emptyStar = 0;
+                if (decimalPart >= 0.25 && decimalPart <= 0.75) {
+                    hasHalfStar = true;
+                    emptyStar--
+                } else if (decimalPart > 0.75) {
+                    fullStar++; // Round up to the next whole star if the decimal part is larger than 0.75
                 }
-                starRatingContainer.appendChild(starIcon);
+                emptyStar = 5 - fullStar + emptyStar;
+                // Loop to generate star icons based on rating
+                for (let i = 0; i < fullStar; i++) {
+                    const starIcon = document.createElement('i');
+                    starIcon.classList.add('fas', 'fa-star', 'filled');
+                    starRatingContainer.appendChild(starIcon);
+                }
+                if (hasHalfStar) {
+                    const halfStarIcon = document.createElement('i');
+                    halfStarIcon.classList.add('fas', 'fa-star', 'half-filled');
+                    starRatingContainer.appendChild(halfStarIcon);
+                }
+                console.log(emptyStar);
+                for (let i = 0; i < emptyStar; i++) {
+                    const starIcon = document.createElement('i');
+                    starIcon.classList.add('fas', 'fa-star');
+                    starRatingContainer.appendChild(starIcon);
+                }
+            }
+            else{
+                starRatingContainer.innerHTML = 'invalid input';
+                console.log('invalid input');
             }
         }
+        // function displayStarRating(rating) {
+        //     const starRatingContainer = document.getElementById('star-rating');
+        //     const percentage = (rating / 5) * 100; // Calculate the percentage for the gradient width
+        //     starRatingContainer.style.background = `linear-gradient(to right, gold 0%, gold ${percentage}%, #888 ${percentage}%, #888 100%)`;
+        // }
+
     </script>
 </body>
 
