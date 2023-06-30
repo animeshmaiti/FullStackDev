@@ -1,0 +1,27 @@
+-- If the id column is defined as an auto-incrementing column with the UNIQUE
+-- attribute, you cannot insert values directly into it
+-- INSERT INTO student
+-- VALUES ('Alice', 20, 'f', 95.75);
+-- INSERT INTO student (name, age, gender, total)
+-- VALUES ('Alice', 20, 'f', 95.75);
+-- SELECT * FROM student;
+-- CREATE TABLE student (
+--     name VARCHAR(255),
+--     age INT,
+--     gender CHAR(1),
+--     total DECIMAL(5, 2)
+-- );
+-- ALTER TABLE student
+-- ADD COLUMN id INT AUTO_INCREMENT UNIQUE;
+-- DROP TABLE student;
+-- INSERT INTO student VALUES ('emma', 21, 'f', 92.35);
+-- INSERT INTO student VALUES ('alex', 20, 'm', 87.42);
+-- INSERT INTO student VALUES ('sarah', 19, 'f', 91.12);
+-- INSERT INTO student VALUES ('michael', 22, 'm', 88.75);
+-- INSERT INTO student VALUES ('olivia', 20, 'f', 90.18);
+-- INSERT INTO student VALUES ('david', 19, 'm', 86.99);
+-- INSERT INTO student VALUES ('emily', 18, 'f', 94.21);
+-- INSERT INTO student VALUES ('jacob', 21, 'm', 89.88);
+-- INSERT INTO student VALUES ('ava', 19, 'f', 93.75);
+-- INSERT INTO student VALUES ('william', 20, 'm', 91.86);
+-- SELECT * FROM student;
