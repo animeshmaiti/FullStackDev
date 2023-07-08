@@ -1,7 +1,7 @@
 <?php
 $name=$_GET["name"];
 $age=$_GET["age"];
-$gender=$_GET["total"];
+$gender=$_GET["gender"];
 $total=$_GET["total"];
 
 $conn=new mysqli("localhost","root","","acme");
