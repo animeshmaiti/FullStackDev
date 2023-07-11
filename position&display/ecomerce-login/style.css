@@ -1,0 +1,18 @@
+.reg-form{
+    border: #2874f0 1px solid;
+    border-radius: 5px;
+    height: 100%;
+}
+.left-container{
+    border-radius: 5px 0 0 5px;
+    background-color: #2874f0;
+    width: 40%;
+}
+.inputs-container{
+    /* border-color: #2874f0; */
+    border-radius: 0 5px 5px 0;
+    width: 60%;
+}
+form{
+    width: 70%;
+}
